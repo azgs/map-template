@@ -7,8 +7,19 @@ var app = {
 
 app.baseLayer.addTo(app.map);
 L.geocoderControl().addTo(app.map);
+$('#info').waypoint(scrolling, { offset: '75%' });
 
-function scroller() {
-  var setTo = window.location.hash === '#info' ? '#map' : '#info';
-  $("html, body").animate({scrollTop: $("section" + setTo).position().top}, function () { window.location.hash = setTo; });
+function scrolling(direction) {
+  if (!direction) direction = $(window).scrollTop() === 0 ? 'down': 'up';
+
+  var position = direction === 'up' ? 0 : $('#info').position().top,
+      btnText = position === 0 ? 'About this map' : 'View the map',
+      hash = position === 0 ? '#map' : '#info';
+
+  $("html, body").animate({scrollTop: position}, function () {
+    var i = $('#mover').find('i');
+
+    window.location.hash = hash;
+    $('#mover').text(btnText);
+  });
 }

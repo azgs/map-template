@@ -1,5 +1,5 @@
 div { margin: 0; }
-html, body, #map, #info { height: 100%; }
+html, body, #map { height: 100%; }
 
 /* Position the info div */
 #info {
@@ -7,6 +7,7 @@ html, body, #map, #info { height: 100%; }
     background-color: rgba(0,0,0,0.8);
     color: white;
     padding: 10px;
+    height: 400px;
     box-sizing: border-box;
 }
 
@@ -27,7 +28,7 @@ html, body, #map, #info { height: 100%; }
     cursor: pointer;
 }
 
-.mover {
+#mover {
     position: fixed;
     bottom: 10px;
     left: 10px;
