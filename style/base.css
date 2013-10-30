@@ -3,35 +3,38 @@ html, body, #map { height: 100%; }
 
 /* Position the info div */
 #info {
-    background-color: black;
-    background-color: rgba(0,0,0,0.8);
-    color: white;
+    position: relative;
     padding: 10px;
-    height: 400px;
+    height: 100%;
     box-sizing: border-box;
 }
 
-/* Position the toggle button */
-#toggle-info {
-    background-color: #fff;
-    box-shadow: 0 1px 7px rgba(0,0,0,0.65);
-    background-image: url('img/show.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    border-radius: 4px 4px 0 0;
-    width: 26px;
-    height: 24px;
+#title-container {
     position: absolute;
-    left: 10px;
-    bottom: 200px;
-    cursor: pointer;
-}
-
-#mover {
-    position: fixed;
     bottom: 10px;
     left: 10px;
+}
+
+#back-to-map {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.scroll-container {
+    text-align: center;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: white;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.scroll-container .scroll-btn {
+    width: 100%;
+    border-radius: 0;
+}
+
+.scroll-container h3 {
+    padding: 0 10px;
 }
 
 /* Set the logo image */

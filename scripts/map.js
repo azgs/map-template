@@ -7,10 +7,11 @@ var app = {
 
 app.baseLayer.addTo(app.map);
 L.geocoderControl().addTo(app.map);
-$('#info').waypoint(scrolling, { offset: '75%' });
+$('#info').waypoint(scrolling, { offset: '50%' });
+$('.scroll-btn').click(scrolling);
 
 function scrolling(direction) {
-  if (!direction) direction = $(window).scrollTop() === 0 ? 'down': 'up';
+  if (typeof direction !== 'string') direction = $(window).scrollTop() === 0 ? 'down': 'up';
 
   var position = direction === 'up' ? 0 : $('#info').position().top,
       btnText = position === 0 ? 'About this map' : 'View the map',
