@@ -8,8 +8,7 @@ var app = {
 app.baseLayer.addTo(app.map);
 L.geocoderControl().addTo(app.map);
 
-// Add click effect to the legend toggler
-d3.select('#toggle-info').on('click', function () {
-  var enabled = d3.select('#info').classed('hidden');
-  d3.select('#info').classed('hidden', !enabled);
-});
+function scroller() {
+  var setTo = window.location.hash === '#info' ? '#map' : '#info';
+  $("html, body").animate({scrollTop: $("section" + setTo).position().top}, function () { window.location.hash = setTo; });
+}

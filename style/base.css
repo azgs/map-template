@@ -1,22 +1,13 @@
 div { margin: 0; }
-html, body, #map { height: 100%; }
-body { overflow: hidden; }
+html, body, #map, #info { height: 100%; }
 
 /* Position the info div */
 #info {
-    position: relative;
-    height: 200px;
-    bottom: 200px;
     background-color: black;
     background-color: rgba(0,0,0,0.8);
     color: white;
-    border-top: 1px solid white;
-    padding: 0 10px;
-    transition: bottom 0.5s;
-}
-
-#info.hidden {
-    bottom: 0px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Position the toggle button */
@@ -36,8 +27,10 @@ body { overflow: hidden; }
     cursor: pointer;
 }
 
-#toggle-info:hover {
-    background-color: #f4f4f4;
+.mover {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
 }
 
 /* Set the logo image */
@@ -58,4 +51,10 @@ body { overflow: hidden; }
         background: url('img/azgs-logo-ret.png');
         background-size: contain;
     }
+}
+
+.scrolldown {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
 }
