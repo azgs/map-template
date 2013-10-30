@@ -5,8 +5,7 @@ html, body, #map { height: 100%; }
 #info {
     position: relative;
     padding: 10px;
-    height: 100%;
-    box-sizing: border-box;
+    min-height: 100%;
 }
 
 #title-container {
@@ -15,26 +14,19 @@ html, body, #map { height: 100%; }
     left: 10px;
 }
 
-#back-to-map {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-}
-
-.scroll-container {
+.scroll-title {
+    padding: 15px;
     text-align: center;
-    border: 1px solid rgb(230, 230, 230);
     background-color: white;
     background-color: rgba(255,255,255,0.8);
+    border: 1px solid rgb(230,230,230);
+    border-bottom: none;
+    margin: 0;
 }
 
-.scroll-container .scroll-btn {
+.scroll-btn {
     width: 100%;
     border-radius: 0;
-}
-
-.scroll-container h3 {
-    padding: 0 10px;
 }
 
 /* Set the logo image */
